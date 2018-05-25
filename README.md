@@ -5,6 +5,9 @@
 [![License](https://img.shields.io/cocoapods/l/JALocalFramework.svg?style=flat)](https://cocoapods.org/pods/JALocalFramework)
 [![Platform](https://img.shields.io/cocoapods/p/JALocalFramework.svg?style=flat)](https://cocoapods.org/pods/JALocalFramework)
 
+## Screenshots
+
+<img src="https://im5.ezgif.com/tmp/ezgif-5-bd5cc9f582.gif"  width="350">  </center>
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
