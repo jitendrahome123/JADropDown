@@ -1,0 +1,11 @@
+framework module JADropDown {
+  umbrella header "JADropDown.h"
+
+  export *
+  module * { export * }
+}
+
+module JADropDown.Swift {
+    header "JADropDown-Swift.h"
+    requires objc
+}

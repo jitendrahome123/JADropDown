@@ -161,7 +161,8 @@ public class JADropDown: UIView, UITableViewDelegate, UITableViewDataSource {
  extension JADropDown {
     // set tableView cellIdentifier
     func cellIdentifier() {
-        tableViewCustom.register(UINib(nibName:"EDSDropDownCell", bundle:Bundle(identifier: "come.paypal.demo.EDSDropDown")), forCellReuseIdentifier:"EDSDropDownCell")
+        let podBundle = Bundle(for: JADropDown.self)
+        tableViewCustom.register(UINib(nibName:"JADropDownCell", bundle:podBundle), forCellReuseIdentifier:"JADropDownCell")
         tableViewCustom.delegate = self
         tableViewCustom.dataSource = self
         tableViewCustom.backgroundColor = bgColor
