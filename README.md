@@ -10,7 +10,9 @@
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
-
+* Swift 4.0
+* Xcode 9
+* iOS 10.0+
 ## Installation
 
 JADropDown is available through [CocoaPods](https://cocoapods.org). To install
