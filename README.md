@@ -1,2 +1,30 @@
 # JADropDown
-Simple Dropdown with single  and multiple selection
+
+[![CI Status](https://img.shields.io/travis/JitendraAgarwal-IOS/JALocalFramework.svg?style=flat)](https://travis-ci.org/JitendraAgarwal-IOS/JALocalFramework)
+[![Version](https://img.shields.io/cocoapods/v/JALocalFramework.svg?style=flat)](https://cocoapods.org/pods/JALocalFramework)
+[![License](https://img.shields.io/cocoapods/l/JALocalFramework.svg?style=flat)](https://cocoapods.org/pods/JALocalFramework)
+[![Platform](https://img.shields.io/cocoapods/p/JALocalFramework.svg?style=flat)](https://cocoapods.org/pods/JALocalFramework)
+
+## Example
+
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
+
+## Requirements
+
+## Installation
+
+JADropDown is available through [CocoaPods](https://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod 'JADropDown'
+```
+
+## Author
+
+JitendraAgarwal-IOS, jagarwal
+
+## License
+
+JADropDown is available under the MIT license. See the LICENSE file for more info.
+
