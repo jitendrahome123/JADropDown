@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
 
 
   s.name         = "JADropDown"
-  s.version      = "0.1.0"
+  s.version      = "1.2.0"
   s.summary      = "This is simple drop down."
   s.description  = "This is JA DropDwon with singleSelection And Multiplection"
   s.homepage     = "https://github.com/JitendraAgarwal-IOS/JADropDown.git"
