@@ -16,13 +16,13 @@ import UIKit
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var imgWidthConstRight: NSLayoutConstraint!
     @IBOutlet weak var imgWidthConstLeft: NSLayoutConstraint!
-    internal var seletedColor: UIColor?
-    internal var imageType: ImageType!
-    internal var selectionBold: BoldSelection!
-    internal var index:Int?
-    internal var selectionType:EnumJADropDownSelectionType!
-    internal var imagePosition: imagePosition!
-    internal var fontType: TitleFont!
+    public var seletedColor: UIColor?
+    public var imageType: ImageType!
+    public var selectionBold: BoldSelection!
+    public var index:Int?
+    public var selectionType:EnumJADropDownSelectionType!
+    public var imagePosition: imagePosition!
+    public var fontType: TitleFont!
     
     var didTapCheackBoxHandler: ((_ indexValue: Int, _ selectionType:EnumJADropDownSelectionType, _ dataScouce: AnyObject?) -> ())?
     

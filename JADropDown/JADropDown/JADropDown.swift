@@ -1,6 +1,6 @@
 //
-//  EDSDropDown.swift
-// EDSMercury
+//  JADropDown.swift
+
 //
 //  Created by Agarwal, JitendraKumar(AWF)  on 3/22/18.
 //  Copyright © 2018 PayPal. All rights reserved.
@@ -19,9 +19,9 @@ public enum imagePosition: Int {
 }
 
 /************************************
- *****  EDSDropDown Control Protocol   *****
+ *****  JADropDown Control Protocol   *****
  ************************************/
-protocol JADropDownDelegate: class {
+public protocol JADropDownDelegate: class {
     func didReceivedJADropDownSeletedItems(items : [AnyObject],index:Int)
     func didReceivedJADropDownSingleSeletedtems(items : [String: AnyObject],index:Int)
 }
@@ -31,16 +31,16 @@ public class JADropDown: UIView, UITableViewDelegate, UITableViewDataSource {
     var bgButton: UIButton!
     var delegate: JADropDownDelegate?
     var selectionType:EnumJADropDownSelectionType!
-    private var indexValue:Int?
-    private var xPadding: CGFloat = 0.0
-    private var imageType = ImageType()
-    private var fontType = TitleFont()
-    private var selectColorBG =  UIColor()
-    private var imgPositionType:imagePosition!
-    private  var selectionBold = BoldSelection()
-    private var width: CGFloat = isiPad() ? 250 : 180
-    private var height: CGFloat = isiPad() ? 250 : 160
-    override init(frame: CGRect) {
+    public var indexValue:Int?
+    public var xPadding: CGFloat = 0.0
+    public var imageType = ImageType()
+    public var fontType = TitleFont()
+    public var selectColorBG =  UIColor()
+    public var imgPositionType:imagePosition!
+    public  var selectionBold = BoldSelection()
+    public var width: CGFloat = isiPad() ? 250 : 180
+    public var height: CGFloat = isiPad() ? 250 : 160
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         self.frame = frame
     }
@@ -61,7 +61,7 @@ public class JADropDown: UIView, UITableViewDelegate, UITableViewDataSource {
         
     }()
     
-   
+    
     // MARK:- Set Image
     public func setImage(imgeType: UIImage) {
         self.imageType = ImageType(selectionImage: imgeType)
@@ -77,7 +77,7 @@ public class JADropDown: UIView, UITableViewDelegate, UITableViewDataSource {
         colorTableViewBG = backgroundColor
         bgColor = colorTableViewBG
     }
-   private var bgColor: UIColor = colorTableViewBG {
+    public var bgColor: UIColor = colorTableViewBG {
         didSet {
             self.tableViewCustom.backgroundColor = colorTableViewBG
         }
@@ -108,7 +108,8 @@ public class JADropDown: UIView, UITableViewDelegate, UITableViewDataSource {
     }
     
     // initialization  EDSDrop DOWN VIEW
-    init(frame: CGRect?,xPosition: CGFloat, yPosition: CGFloat, inView:UIView, data:DataItems,selectionType:EnumJADropDownSelectionType, imagePosition:imagePosition, delegate:JADropDownDelegate){
+    public init(frame: CGRect?,xPosition: CGFloat, yPosition: CGFloat, inView:UIView, data:DataItems,selectionType:EnumJADropDownSelectionType, imagePosition:imagePosition, delegate:JADropDownDelegate){
+        
         var aFrame: CGRect!
         if let _ = frame {
             aFrame = frame
@@ -117,6 +118,7 @@ public class JADropDown: UIView, UITableViewDelegate, UITableViewDataSource {
             aFrame =  CGRect(x: 0, y: 0, width: 0, height: 0)
         }
         super.init(frame: aFrame!)
+        
         if data.arrayData.count > 0 {
             self.removeFromSuperview()
             xPadding = 5.0
@@ -156,11 +158,10 @@ public class JADropDown: UIView, UITableViewDelegate, UITableViewDataSource {
 /***************************************************
  ********  EDSDropDown USER DEFINE FUNCTION   ********
  ***********************************************/
-extension JADropDown {
+ extension JADropDown {
     // set tableView cellIdentifier
     func cellIdentifier() {
-          let podBundle = Bundle(for: JADropDown.self)
-        tableViewCustom.register(UINib(nibName:"JADropDownCell", bundle: podBundle), forCellReuseIdentifier:"JADropDownCell")
+        tableViewCustom.register(UINib(nibName:"EDSDropDownCell", bundle:Bundle(identifier: "come.paypal.demo.EDSDropDown")), forCellReuseIdentifier:"EDSDropDownCell")
         tableViewCustom.delegate = self
         tableViewCustom.dataSource = self
         tableViewCustom.backgroundColor = bgColor
@@ -231,7 +232,7 @@ extension JADropDown {
      ******** EDSDropDown ACTION ********
      ***********************************************/
     // MARK:- checkBox Button Handle
-    private func updateCheackBoxWith(withSelectionType selectionTypeValue:EnumJADropDownSelectionType, index:Int, dataScource:AnyObject){
+    public func updateCheackBoxWith(withSelectionType selectionTypeValue:EnumJADropDownSelectionType, index:Int, dataScource:AnyObject){
         var newDictFormat = dataScource as! [String: AnyObject]
         self.selectionType = selectionTypeValue
         self.indexValue = index
@@ -243,7 +244,7 @@ extension JADropDown {
             if selectionTypeValue == .singleSelection {
                 self.reSetArray()
             }
-                if newDictFormat["buttonToggleSelection"] as! Bool ==  true {
+            if newDictFormat["buttonToggleSelection"] as! Bool ==  true {
                 newDictFormat["buttonToggleSelection"]  = false as AnyObject?
                 
             }

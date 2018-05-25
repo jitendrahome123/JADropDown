@@ -16,9 +16,9 @@ public enum EnumFontProperty : Int {
 }
 // Set Data properties
 public struct DataItems {
-    internal var arrayData =  [AnyObject]()
+    public var arrayData =  [AnyObject]()
     
-    internal init(pdata: [AnyObject]) {
+    public init(pdata: [AnyObject]) {
         
         var dict = [String: AnyObject]()
         for index in 0..<pdata.count {
@@ -30,11 +30,11 @@ public struct DataItems {
 
 //  Set the image properties
 public struct ImageType {
-    internal var selectionImage: UIImage?
+    public var selectionImage: UIImage?
 }
 
 //  Set a font properties
-internal struct TitleFont {
+public struct TitleFont {
     internal var fontName: String  = ""
     internal var fontSize: Int = 0
     internal var property: EnumFontProperty!
@@ -43,8 +43,8 @@ internal struct TitleFont {
 // Set Bold Selction
 
 public struct BoldSelection {
-    internal var isBold: Bool  = false
-    internal var fontSize: CGFloat = 0.0
+    public var isBold: Bool  = false
+    public var fontSize: CGFloat = 0.0
 }
 // MARK:- Identify Ipad
 public func isiPad () -> Bool {
