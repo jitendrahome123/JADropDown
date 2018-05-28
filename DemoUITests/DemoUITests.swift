@@ -3,7 +3,7 @@
 //  DemoUITests
 //
 //  Created by Agarwal, JitendraKumar(AWF) on 5/25/18.
-//  Copyright © 2018 Agarwal, JitendraKumar(AWF). All rights reserved.
+//   Copyright © 2018 Agarwal. All rights reserved.
 //
 
 import XCTest

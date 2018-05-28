@@ -3,7 +3,7 @@
 
 //
 //  Created by Agarwal, JitendraKumar(AWF)  on 3/22/18.
-//  Copyright © 2018 PayPal. All rights reserved.
+//  Copyright © 2018 Agarwal. All rights reserved.
 //
 
 import UIKit

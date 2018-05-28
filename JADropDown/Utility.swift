@@ -3,7 +3,7 @@
 //  JADropDown
 //
 //  Created by Agarwal, JitendraKumar(AWF) on 5/15/18.
-//  Copyright © 2018 Agarwal, JitendraKumar(AWF). All rights reserved.
+//  Copyright © 2018 Agarwal. All rights reserved..
 //
 
 import UIKit
