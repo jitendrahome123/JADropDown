@@ -7,7 +7,7 @@
 
 ## Screenshots
 
-<img src="https://im5.ezgif.com/tmp/ezgif-5-bd5cc9f582.gif"  width="350">  </center>
+<img src="https://media.giphy.com/media/ReliTaKJ3DvSfR8Y9M/giphy.gif"  width="350">  </center>
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
