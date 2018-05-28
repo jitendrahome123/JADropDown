@@ -2,7 +2,7 @@
 //  Utility.swift
 //  JADropDown
 //
-//  Created by Agarwal, JitendraKumar(AWF) on 5/15/18.
+//  Created by Agarwal, on 5/25/18.
 //  Copyright © 2018 Agarwal. All rights reserved..
 //
 
